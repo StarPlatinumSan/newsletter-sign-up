@@ -1,0 +1,53 @@
+@media screen and (min-width: 800px) {
+	body {
+		justify-content: center;
+	}
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	input {
+		width: 20rem;
+	}
+
+	.container {
+		display: flex;
+		min-width: 50rem;
+		min-height: 35rem;
+		flex-direction: row-reverse;
+	}
+
+	.bg-image {
+		min-width: 15rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.img {
+		background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+		background-position: center;
+		background-size: contain;
+		width: 40rem;
+		margin: 0;
+		padding: 0;
+		border: 15px solid white;
+		border-radius: 25px;
+	}
+
+	.stayUpdated {
+		margin: 0;
+		padding-left: 2em;
+		padding-right: 2em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.stayUpdated > * {
+		line-height: 1;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+}
