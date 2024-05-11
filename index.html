@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/queries.css">
+  <script defer src="js/script.js"></script>
+
   <link rel="icon" href="assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +24,7 @@
 </head>
 <body>
 
-  <main class="container">
+  <main class="container" id="mainPage">
     <div class="bg-image">
       <div class="img"></div>
     </div>
@@ -43,15 +45,25 @@
       </div>
 
       <form action="submit" id="emailSubmit">
-        <label for="email">Email address</label>
+        <label for="email">Email address <span id="errorMessage">Valid email required</span></label>
         <input type="email" id="email" pattern=".+@+.+" placeholder="email@company.com" size="30" required />
-        <input type="submit" value="Subscribe to monthly newsletter" class="button">
+        <input type="button" value="Subscribe to monthly newsletter" class="button" id="emailButton">
       </form>
       
     </div>
   </main>
+
+  <div class="confirmationCard hidden" id="confirmed">
+    <div class="upperConfirmation">
+      <div class="svgConfirmation"></div>
+      <h2>Thanks for subscribing!</h2>
+      <p class="confirmEmailText">A confirmation email has been sent to <span id="emailText">AAA</span>. Please open it and click the button inside to confirm your subscription.</p>
+    </div>
+
+    <button class="dismissButton" id="dismiss">Dismiss message</button>
+  </div>
   
-  <footer class="attribution">
+  <footer class="attribution hidden">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">StarPlatinumSan</a>.
   </footer>
